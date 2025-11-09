@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Neo Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="index.html" class="brand">
+        <img src="ChatGPT Image 9 nov 2025, 13_26_45.png" alt="Neo Store logo" class="logo" />
+        <span>Neo Store</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn small" id="theme-toggle">Dark Mode</button>
+        <button class="btn small" id="cart-btn">🛒 <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="container about">
+    <h1>About Neo Store</h1>
+    <p>Neo Store was founded with one mission to bring futuristic design and technology together for everyone. We believe innovation should be accessible, stylish, and reliable.</p>
+    <p>Our curated collection includes the latest gadgets, smart devices, and accessories that combine performance and aesthetics. Join us in redefining how people experience technology.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Neo Store — The future of online shopping.</p>
+  </footer>
+
+  <div id="cart-modal" class="cart-modal hidden">
+    <div class="cart-window">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-btn">✕</button>
+      </div>
+      <ul id="cart-items"></ul>
+      <p class="total">Total: $<span id="cart-total">0.00</span></p>
+      <div id="checkout-container"></div>
+      <div class="cart-actions">
+        <button class="btn" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

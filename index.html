@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo Store | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a href="index.html" class="brand">
+        <img src="ChatGPT Image 9 nov 2025, 13_26_45.png" alt="Neo Store logo" class="logo" />
+        <span>Neo Store</span>
+      </a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="btn small" id="theme-toggle">Dark Mode</button>
+        <button class="btn small" id="cart-btn">🛒 <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-grid">
+      <div>
+        <h1>Welcome to Neo Store</h1>
+        <p>Shop the best futuristic tech gadgets with modern design and premium quality.</p>
+      </div>
+      <img src="ChatGPT Image 9 nov 2025, 13_26_45.png" width="200px" height="200px" alt="Hero" />
+    </div>
+  </section>
+
+  <section class="container products">
+    <h2>Featured Products</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="71PeqDCFgCL._SL1500_.jpg" alt="Astro A50" />
+        <h3>Astro A50</h3>
+        <p>$49.99</p>
+        <button class="btn add" data-id="1">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="smart-chasy-smart-watch-gx-8-ultra-chernye-1758262027580.png" alt="Apple Watch" />
+        <h3>Apple Watch</h3>
+        <p>$79.90</p>
+        <button class="btn add" data-id="2">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="eee.jpeg" alt="Logitech G502" />
+        <h3>Logitech G502</h3>
+        <p>$49.99</p>
+        <button class="btn add" data-id="3">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="key.jpg" alt="Keyboard" />
+        <h3>RGB Keyboard</h3>
+        <p>$65.00</p>
+        <button class="btn add" data-id="4">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2025 Neo Store — The future of online shopping.</p>
+  </footer>
+
+  <!-- CART -->
+  <div id="cart-modal" class="cart-modal hidden">
+    <div class="cart-window">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-btn">✕</button>
+      </div>
+      <ul id="cart-items"></ul>
+      <p class="total">Total: $<span id="cart-total">0.00</span></p>
+      <div id="checkout-container"></div>
+      <div class="cart-actions">
+        <button class="btn" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

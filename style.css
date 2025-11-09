@@ -1,0 +1,248 @@
+:root {
+  --orange: #ff7b00;
+  --black: #0d0d0d;
+  --white: #ffffff;
+  --gray: #eaeaea;
+  --dark-gray: #1a1a1a;
+  --radius: 14px;
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--white);
+  color: var(--black);
+  transition: background var(--transition), color var(--transition);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header {
+  background: var(--white);
+  border-bottom: 3px solid var(--orange);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+}
+.nav-list a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-list a:hover {
+  color: var(--orange);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.btn {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn:hover {
+  filter: brightness(1.15);
+}
+.btn.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--orange);
+}
+.hero p {
+  max-width: 500px;
+  color: #333;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.product-card {
+  background: var(--white);
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: var(--transition);
+}
+.product-card:hover {
+  transform: translateY(-6px);
+}
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.product-card h3 {
+  color: var(--orange);
+}
+
+.cart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+.cart-window {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--orange);
+}
+.cart-header h2 {
+  color: var(--orange);
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--black);
+}
+.cart-window ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+.cart-window li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.total {
+  font-weight: bold;
+  color: var(--orange);
+  text-align: right;
+}
+.cart-actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.checkout-area {
+  margin-top: 1rem;
+  background: var(--gray);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.checkout-area h3 {
+  color: var(--orange);
+  text-align: center;
+}
+.checkout-area label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+.checkout-area input,
+.checkout-area select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 0.3rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--white);
+  color: var(--black);
+  border-top: 3px solid var(--orange);
+}
+
+body.dark {
+  background: var(--black);
+  color: var(--gray);
+}
+body.dark .site-header {
+  background: var(--dark-gray);
+  border-bottom: 3px solid var(--orange);
+}
+body.dark .nav-list a {
+  color: var(--gray);
+}
+body.dark .product-card {
+  background: #222;
+  color: var(--gray);
+}
+body.dark .product-card h3 {
+  color: var(--orange);
+}
+body.dark .cart-window {
+  background: #1f1f1f;
+  color: var(--gray);
+}
+body.dark .checkout-area {
+  background: #2b2b2b;
+}
+body.dark .site-footer {
+  background: var(--dark-gray);
+  color: var(--gray);
+}
